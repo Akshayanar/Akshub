@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      animation: fade 1.5s ease-in-out;
+      padding: 3rem 1rem;
+      box-sizing: border-box;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.45);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .text-container {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    h1, p {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      font-weight: bold;
+      color: #fff;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.8rem;
+      margin-bottom: 2rem;
+      animation: typing 2.5s steps(30, end), blink 0.8s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2.6rem;
+      margin: 0;
+      animation: fadeIn 2s ease both;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .show {
+      display: block;
+    }
+
+    .start-screen {
+      background-image: url('https://i.pinimg.com/736x/c5/c8/b9/c5c8b9077bce1f8179f91f2078e37b56.jpg');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .start-button {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      background: rgba(255, 0, 102, 0.8);
+      border: none;
+      color: white;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-family: 'Great Vibes', cursive;
+      box-shadow: 0 0 20px rgba(255, 0, 102, 0.6);
+    }
+
+    .heart, .sparkle {
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png');
+      animation: fly 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    .sparkle {
+      width: 15px;
+      height: 15px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+      animation: float 8s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes fly {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="start-screen">
+    <button class="start-button" onclick="startShow()">Tap to Begin 💌</button>
+  </div>
+
+  <div class="slide" style="background-image: url('https://i.pinimg.com/736x/c5/c8/b9/c5c8b9077bce1f8179f91f2078e37b56.jpg');">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>How dumb I behave sometimes 🥺</h1>
+      <p>But even then... I can’t stop loving you 💓</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://i.pinimg.com/1200x/d6/7d/64/d67d6470e9e94f3244a131077c47c847.jpg');">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>I'm Sorry... 💔</h1>
+      <p>I hurt you. I know. And it breaks my heart too 😞</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://i.pinimg.com/736x/88/cc/69/88cc692b380caaea2ec94fdbed16ea8e.jpg');">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>You mean everything to me 💖</h1>
+      <p>Even in our fights, my heart still chooses you 💘</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://i.pinimg.com/736x/ea/e4/d4/eae4d495519af42d6ecd752ef4aa9c8e.jpg');">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>Forgive me please 🙏</h1>
+      <p>I need your smile more than anything in this world 🌍💞</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://i.pinimg.com/1200x/15/d4/54/15d45443f5a27ce5d26a63dc8a65a0f3.jpg');">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>I love you so much 💘</h1>
+      <p>Maj Kuchipuchikuuuuuu 😘💋💋</p>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('show'));
+      slides[index].classList.add('show');
+    }
+
+    function startShow() {
+      document.querySelector('.start-screen').style.display = 'none';
+      slides[0].classList.add('show');
+    }
+
+    setInterval(() => {
+      if (document.querySelector('.start-screen').style.display === 'none') {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+    }, 5000);
+
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.animationDelay = `${Math.random() * 10}s`;
+      heart.style.animationDuration = `${5 + Math.random() * 5}s`;
+      document.body.appendChild(heart);
+
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = `${Math.random() * 100}vw`;
+      sparkle.style.animationDelay = `${Math.random() * 10}s`;
+      sparkle.style.animationDuration = `${5 + Math.random() * 5}s`;
+      document.body.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
